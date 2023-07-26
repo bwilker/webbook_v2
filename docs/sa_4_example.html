@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
-<head>
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.361">
 
-<meta charset="utf-8" />
-<meta name="generator" content="quarto-1.3.361" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<meta name="author" content="Methods Student">
+<meta name="dcterms.date" content="2023-07-26">
 
-<meta name="author" content="Methods Student" />
-<meta name="dcterms.date" content="2023-07-26" />
-
-<title>POLS 2000 Webbook 2.0 – SA 4: Single Variable EDA</title>
+<title>POLS 2000 Webbook 2.0 - SA 4: Single Variable EDA</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -60,7 +58,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 
-<!-- htmldependencies:E3FAD763 -->
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./sa_6_example.html" rel="next">
+<link href="./sa_3_example.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -85,23 +101,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body>
+<body class="nav-sidebar floating">
 
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn"
-      data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" 
-      aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation"
-      onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <h1 class="quarto-secondary-nav-title"></h1>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" 
-      aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation"
-      onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sa_2_nespilot22_example.html">Appendices</a></li><li class="breadcrumb-item"><a href="./sa_4_example.html">SA 4: Single Variable EDA</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -115,9 +126,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="/">
-      POLS 2000 Webbook 2.0
-      </a> 
+      <a href="./">POLS 2000 Webbook 2.0</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -129,7 +138,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
@@ -144,20 +153,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/posit_studio_cloud.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>1</span>  <span class='chapter-title'>RStudio Cloud</span></span></a>
+  <a href="./posit_studio_cloud.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">RStudio Cloud</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/navigating_R.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>2</span>  <span class='chapter-title'>Navigating RStudio</span></span></a>
+  <a href="./navigating_R.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Navigating RStudio</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/using_quarto_docs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>3</span>  <span class='chapter-title'>Using Quarto Documents</span></span></a>
+  <a href="./using_quarto_docs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Using Quarto Documents</span></span></a>
   </div>
 </li>
       </ul>
@@ -173,8 +182,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/choosing_a_dataset.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>4</span>  <span class='chapter-title'>Choosing Your Dataset</span></span></a>
+  <a href="./choosing_a_dataset.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Choosing Your Dataset</span></span></a>
   </div>
 </li>
       </ul>
@@ -182,7 +191,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
- <span class="menu-text">SKILLS & TECHNIQUES</span></a>
+ <span class="menu-text">SKILLS &amp; TECHNIQUES</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -190,50 +199,50 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/loading_saving_data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>5</span>  <span class='chapter-title'>Loading and Saving Data</span></span></a>
+  <a href="./loading_saving_data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Loading and Saving Data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/managing_data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>6</span>  <span class='chapter-title'>Managing Data</span></span></a>
+  <a href="./managing_data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Managing Data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/one_variable_graphs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>7</span>  <span class='chapter-title'>Graphs for One Variable</span></span></a>
+  <a href="./one_variable_graphs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Graphs for One Variable</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/one_variable_statistics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>8</span>  <span class='chapter-title'>Statistics for One Variable</span></span></a>
+  <a href="./one_variable_statistics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Statistics for One Variable</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/two_plus_variable_graphs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>9</span>  <span class='chapter-title'>Graphs for Two or More Variables</span></span></a>
+  <a href="./two_plus_variable_graphs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Graphs for Two or More Variables</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/two_plus_variable_tables.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>10</span>  <span class='chapter-title'>Tables for 2 or More Variables</span></span></a>
+  <a href="./two_plus_variable_tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Tables for 2 or More Variables</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/hypothesis_testing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>11</span>  <span class='chapter-title'>Hypothesis Testing</span></span></a>
+  <a href="./hypothesis_testing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Hypothesis Testing</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/regression.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>12</span>  <span class='chapter-title'>Regression Analysis</span></span></a>
+  <a href="./regression.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Regression Analysis</span></span></a>
   </div>
 </li>
       </ul>
@@ -249,55 +258,55 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/sa_2_nespilot22_example.html" class="sidebar-item-text sidebar-link">
+  <a href="./sa_2_nespilot22_example.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SA 2: 2022 ANES Pilot Study</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/sa_2_wvs_example.html" class="sidebar-item-text sidebar-link">
+  <a href="./sa_2_wvs_example.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SA 2: WVS</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/sa_2_anes20_example.html" class="sidebar-item-text sidebar-link">
+  <a href="./sa_2_anes20_example.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SA 2: ANES 2020</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/sa_3_example.html" class="sidebar-item-text sidebar-link">
+  <a href="./sa_3_example.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SA 3: Data Management Strategies</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/sa_4_example.html" class="sidebar-item-text sidebar-link active">
+  <a href="./sa_4_example.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">SA 4: Single Variable EDA</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/sa_6_example.html" class="sidebar-item-text sidebar-link">
+  <a href="./sa_6_example.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SA 6: Two or more variable EDA</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/sa_7_example.html" class="sidebar-item-text sidebar-link">
+  <a href="./sa_7_example.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SA 7: Hypothesis Testing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/sa_8_logistic_example.html" class="sidebar-item-text sidebar-link">
+  <a href="./sa_8_logistic_example.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SA 8: Logistic Regression Analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/sa_8_linear_example.html" class="sidebar-item-text sidebar-link">
+  <a href="./sa_8_linear_example.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SA 8: Linear Regression Analysis</span></a>
   </div>
 </li>
@@ -306,10 +315,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" ></div>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <div id="quarto-toc-target"></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link active" data-scroll-target="#discussion">Discussion</a>
+  <ul class="collapse">
+  <li><a href="#load-packages" id="toc-load-packages" class="nav-link" data-scroll-target="#load-packages">Load Packages</a></li>
+  <li><a href="#load-your-dataset" id="toc-load-your-dataset" class="nav-link" data-scroll-target="#load-your-dataset">Load Your Dataset</a></li>
+  <li><a href="#manage-your-data-as-needed" id="toc-manage-your-data-as-needed" class="nav-link" data-scroll-target="#manage-your-data-as-needed">Manage your data as needed</a></li>
+  <li><a href="#graph-1" id="toc-graph-1" class="nav-link" data-scroll-target="#graph-1">Graph 1</a></li>
+  <li><a href="#graph-2" id="toc-graph-2" class="nav-link" data-scroll-target="#graph-2">Graph 2</a></li>
+  <li><a href="#graph-3-add-more-if-you-want-to" id="toc-graph-3-add-more-if-you-want-to" class="nav-link" data-scroll-target="#graph-3-add-more-if-you-want-to">Graph 3 (add more if you want to!)</a></li>
+  <li><a href="#run-univariate-statistics" id="toc-run-univariate-statistics" class="nav-link" data-scroll-target="#run-univariate-statistics">Run Univariate Statistics</a></li>
+  <li><a href="#save-your-updated-dataset" id="toc-save-your-updated-dataset" class="nav-link" data-scroll-target="#save-your-updated-dataset">Save your updated dataset?</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -342,23 +367,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 </header>
-<nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#discussion" id="toc-discussion">Discussion</a>
-  <ul>
-  <li><a href="#load-packages" id="toc-load-packages">Load Packages</a></li>
-  <li><a href="#load-your-dataset" id="toc-load-your-dataset">Load Your Dataset</a></li>
-  <li><a href="#manage-your-data-as-needed" id="toc-manage-your-data-as-needed">Manage your data as needed</a></li>
-  <li><a href="#graph-1" id="toc-graph-1">Graph 1</a></li>
-  <li><a href="#graph-2" id="toc-graph-2">Graph 2</a></li>
-  <li><a href="#graph-3-add-more-if-you-want-to" id="toc-graph-3-add-more-if-you-want-to">Graph 3 (add more if you want to!)</a></li>
-  <li><a href="#run-univariate-statistics" id="toc-run-univariate-statistics">Run Univariate Statistics</a></li>
-  <li><a href="#save-your-updated-dataset" id="toc-save-your-updated-dataset">Save your updated dataset?</a></li>
-  </ul></li>
-  </ul>
-</nav>
+
 <!-- Note: Text inside these symbols are instructions. They won't be rendered when run. -->
 <!-- Add your name above. -->
 <!-- You can change the theme of this document. No need to download anything, go to theme above in the YAML and replace it with the one you want.  -->
@@ -373,13 +382,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 -   Run univariate statistics on your smaller, updated dataset. Run the tbl_summary command (from the gtsummary package) for all of your variables, and the skim command (from the skimr package) for your numeric variables.
 -   Provide a brief write up interpreting your data. Explain what you learned about your variables by looking at the graphs. -->
 <section id="discussion" class="level2">
-<h2>Discussion</h2>
+<h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
 <!-- After running the graphs and the univariate statistics, provide an overall assessment of your data here. -->
 <section id="load-packages" class="level3">
-<h3>Load Packages</h3>
+<h3 class="anchored" data-anchor-id="load-packages">Load Packages</h3>
 <!-- To do testing click on the the green triangle to load the packages you will need. -->
 <div class="cell">
-<div class="sourceCode" id="cb1"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(hrbrthemes)</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(survey)</span>
@@ -390,108 +399,108 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gmodels)</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gtsummary)</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(skimr)</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggblanket)</span></code></pre></div>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggblanket)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="load-your-dataset" class="level3">
-<h3>Load Your Dataset</h3>
+<h3 class="anchored" data-anchor-id="load-your-dataset">Load Your Dataset</h3>
 <!-- Load your current dataset here. -->
 <p>Need help? <a href="http://wilkersite.sunycreate.cloud/4-2-the-bar-graph-a-graph-for-categorical-variables.html">Go to chapter x in the webbook.</a></p>
 <div class="cell">
-<div class="sourceCode" id="cb2"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;anes_pilot_small.RData&quot;</span>)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"anes_pilot_small.RData"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="manage-your-data-as-needed" class="level3">
-<h3>Manage your data as needed</h3>
+<h3 class="anchored" data-anchor-id="manage-your-data-as-needed">Manage your data as needed</h3>
 <p>Need help? <a href="http://wilkersite.sunycreate.cloud/4-2-the-bar-graph-a-graph-for-categorical-variables.html">Go to chapter x in the webbook.</a></p>
 <!-- Place the code in the box below and use the green triangle to run it. (Don't forget you have load packages, and load your data above first! -->
 </section>
 <section id="graph-1" class="level3">
-<h3>Graph 1</h3>
+<h3 class="anchored" data-anchor-id="graph-1">Graph 1</h3>
 <p>Need help? <a href="http://wilkersite.sunycreate.cloud/4-2-the-bar-graph-a-graph-for-categorical-variables.html">Go to chapter 4 in the webbook.</a></p>
 <!-- Place the code in the box below and use the green triangle to run it. (Don't forget you have load packages, and load your data above first! -->
 <div class="cell">
-<div class="sourceCode" id="annotated-cell-3"><pre class="sourceCode r cell-code code-annotation-code"><code class="sourceCode r"><span id="annotated-cell-3-1"><a href="#annotated-cell-3-1" aria-hidden="true" tabindex="-1"></a> anes_pilot_small <span class="sc">|&gt;</span></span>
+<div class="sourceCode cell-code" id="annotated-cell-3"><pre class="sourceCode r code-annotation-code code-with-copy"><code class="sourceCode r"><span id="annotated-cell-3-1"><a href="#annotated-cell-3-1" aria-hidden="true" tabindex="-1"></a> anes_pilot_small <span class="sc">|&gt;</span></span>
 <span id="annotated-cell-3-2"><a href="#annotated-cell-3-2" aria-hidden="true" tabindex="-1"></a>   <span class="fu">as_factor</span>() <span class="sc">|&gt;</span></span>
 <span id="annotated-cell-3-3"><a href="#annotated-cell-3-3" aria-hidden="true" tabindex="-1"></a>   <span class="fu">drop_na</span>(roe) <span class="sc">|&gt;</span></span>
 <span id="annotated-cell-3-4"><a href="#annotated-cell-3-4" aria-hidden="true" tabindex="-1"></a>   <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> roe, <span class="at">weight =</span> weight)) <span class="sc">+</span> </span>
 <span id="annotated-cell-3-5"><a href="#annotated-cell-3-5" aria-hidden="true" tabindex="-1"></a>   <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
-<span id="annotated-cell-3-6"><a href="#annotated-cell-3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Oppose or Favor Overturning Roe v. Wade&quot;</span>) <span class="sc">+</span></span>
-<span id="annotated-cell-3-7"><a href="#annotated-cell-3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;roe&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Number of Respondents&quot;</span>, <span class="at">caption =</span> <span class="st">&quot;Source: 2022 ANES Pilot Study&quot;</span>) <span class="sc">+</span> </span>
-<span id="annotated-cell-3-8"><a href="#annotated-cell-3-8" aria-hidden="true" tabindex="-1"></a>   <span class="fu">theme_ipsum</span>()</span></code></pre></div>
+<span id="annotated-cell-3-6"><a href="#annotated-cell-3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Oppose or Favor Overturning Roe v. Wade"</span>) <span class="sc">+</span></span>
+<span id="annotated-cell-3-7"><a href="#annotated-cell-3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"roe"</span>, <span class="at">y =</span> <span class="st">"Number of Respondents"</span>, <span class="at">caption =</span> <span class="st">"Source: 2022 ANES Pilot Study"</span>) <span class="sc">+</span> </span>
+<span id="annotated-cell-3-8"><a href="#annotated-cell-3-8" aria-hidden="true" tabindex="-1"></a>   <span class="fu">theme_ipsum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="sa_4_example_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672" /></p>
+<p><img src="sa_4_example_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section>
 <section id="graph-2" class="level3">
-<h3>Graph 2</h3>
+<h3 class="anchored" data-anchor-id="graph-2">Graph 2</h3>
 <p>Need help? <a href="http://wilkersite.sunycreate.cloud/4-2-the-bar-graph-a-graph-for-categorical-variables.html">Go to chapter 4 in the webbook.</a></p>
 <!-- Place the code in the box below and use the green triangle to run it. -->
 <div class="cell">
-<div class="sourceCode" id="annotated-cell-4"><pre class="sourceCode r cell-code code-annotation-code"><code class="sourceCode r"><span id="annotated-cell-4-1"><a href="#annotated-cell-4-1" aria-hidden="true" tabindex="-1"></a> anes_pilot_small <span class="sc">|&gt;</span></span>
+<div class="sourceCode cell-code" id="annotated-cell-4"><pre class="sourceCode r code-annotation-code code-with-copy"><code class="sourceCode r"><span id="annotated-cell-4-1"><a href="#annotated-cell-4-1" aria-hidden="true" tabindex="-1"></a> anes_pilot_small <span class="sc">|&gt;</span></span>
 <span id="annotated-cell-4-2"><a href="#annotated-cell-4-2" aria-hidden="true" tabindex="-1"></a>   <span class="fu">as_factor</span>() <span class="sc">|&gt;</span></span>
 <span id="annotated-cell-4-3"><a href="#annotated-cell-4-3" aria-hidden="true" tabindex="-1"></a>   <span class="fu">drop_na</span>(pid3) <span class="sc">|&gt;</span></span>
 <span id="annotated-cell-4-4"><a href="#annotated-cell-4-4" aria-hidden="true" tabindex="-1"></a>   <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> pid3, <span class="at">weight =</span> weight)) <span class="sc">+</span> </span>
 <span id="annotated-cell-4-5"><a href="#annotated-cell-4-5" aria-hidden="true" tabindex="-1"></a>   <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
-<span id="annotated-cell-4-6"><a href="#annotated-cell-4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Three Category Party Identification&quot;</span>) <span class="sc">+</span></span>
-<span id="annotated-cell-4-7"><a href="#annotated-cell-4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Party Identification (pid3)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Number of Respondents&quot;</span>, <span class="at">caption =</span> <span class="st">&quot;Source: 2022 ANES Pilot Study&quot;</span>) <span class="sc">+</span> </span>
-<span id="annotated-cell-4-8"><a href="#annotated-cell-4-8" aria-hidden="true" tabindex="-1"></a>   <span class="fu">theme_ipsum</span>()</span></code></pre></div>
+<span id="annotated-cell-4-6"><a href="#annotated-cell-4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Three Category Party Identification"</span>) <span class="sc">+</span></span>
+<span id="annotated-cell-4-7"><a href="#annotated-cell-4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Party Identification (pid3)"</span>, <span class="at">y =</span> <span class="st">"Number of Respondents"</span>, <span class="at">caption =</span> <span class="st">"Source: 2022 ANES Pilot Study"</span>) <span class="sc">+</span> </span>
+<span id="annotated-cell-4-8"><a href="#annotated-cell-4-8" aria-hidden="true" tabindex="-1"></a>   <span class="fu">theme_ipsum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="sa_4_example_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672" /></p>
+<p><img src="sa_4_example_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section>
 <section id="graph-3-add-more-if-you-want-to" class="level3">
-<h3>Graph 3 (add more if you want to!)</h3>
+<h3 class="anchored" data-anchor-id="graph-3-add-more-if-you-want-to">Graph 3 (add more if you want to!)</h3>
 <p>Need help? <a href="http://wilkersite.sunycreate.cloud/4-2-the-bar-graph-a-graph-for-categorical-variables.html">Go to chapter 4 in the webbook.</a></p>
 <!-- Place the code in the box below and use the green triangle to run it. -->
 <div class="cell">
-<div class="sourceCode" id="annotated-cell-5"><pre class="sourceCode r cell-code code-annotation-code"><code class="sourceCode r"><span id="annotated-cell-5-1"><a href="#annotated-cell-5-1" aria-hidden="true" tabindex="-1"></a> anes_pilot_small <span class="sc">|&gt;</span></span>
+<div class="sourceCode cell-code" id="annotated-cell-5"><pre class="sourceCode r code-annotation-code code-with-copy"><code class="sourceCode r"><span id="annotated-cell-5-1"><a href="#annotated-cell-5-1" aria-hidden="true" tabindex="-1"></a> anes_pilot_small <span class="sc">|&gt;</span></span>
 <span id="annotated-cell-5-2"><a href="#annotated-cell-5-2" aria-hidden="true" tabindex="-1"></a>   <span class="fu">as_factor</span>() <span class="sc">|&gt;</span></span>
 <span id="annotated-cell-5-3"><a href="#annotated-cell-5-3" aria-hidden="true" tabindex="-1"></a>   <span class="fu">drop_na</span>(vote20) <span class="sc">|&gt;</span></span>
 <span id="annotated-cell-5-4"><a href="#annotated-cell-5-4" aria-hidden="true" tabindex="-1"></a>   <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> vote20, <span class="at">weight =</span> weight)) <span class="sc">+</span> </span>
 <span id="annotated-cell-5-5"><a href="#annotated-cell-5-5" aria-hidden="true" tabindex="-1"></a>   <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
-<span id="annotated-cell-5-6"><a href="#annotated-cell-5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Who did you vote in the 2020 election?&quot;</span>) <span class="sc">+</span></span>
-<span id="annotated-cell-5-7"><a href="#annotated-cell-5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Who did you vote for? (vote20)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Number of Respondents&quot;</span>, <span class="at">caption =</span> <span class="st">&quot;Source: 2022 ANES Pilot Study&quot;</span>) <span class="sc">+</span> </span>
-<span id="annotated-cell-5-8"><a href="#annotated-cell-5-8" aria-hidden="true" tabindex="-1"></a>   <span class="fu">theme_ipsum</span>()</span></code></pre></div>
+<span id="annotated-cell-5-6"><a href="#annotated-cell-5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Who did you vote in the 2020 election?"</span>) <span class="sc">+</span></span>
+<span id="annotated-cell-5-7"><a href="#annotated-cell-5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Who did you vote for? (vote20)"</span>, <span class="at">y =</span> <span class="st">"Number of Respondents"</span>, <span class="at">caption =</span> <span class="st">"Source: 2022 ANES Pilot Study"</span>) <span class="sc">+</span> </span>
+<span id="annotated-cell-5-8"><a href="#annotated-cell-5-8" aria-hidden="true" tabindex="-1"></a>   <span class="fu">theme_ipsum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="sa_4_example_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672" /></p>
+<p><img src="sa_4_example_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section>
 <section id="run-univariate-statistics" class="level3">
-<h3>Run Univariate Statistics</h3>
+<h3 class="anchored" data-anchor-id="run-univariate-statistics">Run Univariate Statistics</h3>
 <p>Need help? <a href="http://wilkersite.sunycreate.cloud/4-2-the-bar-graph-a-graph-for-categorical-variables.html">Go to chapter 4 in the webbook.</a></p>
 <!-- Place the code in the box below and use the green triangle to run it. -->
 <div class="cell">
-<div class="sourceCode" id="annotated-cell-6"><pre class="sourceCode r cell-code code-annotation-code"><code class="sourceCode r"><span id="annotated-cell-6-1"><a href="#annotated-cell-6-1" aria-hidden="true" tabindex="-1"></a>anes_pilot_small <span class="sc">|&gt;</span></span>
+<div class="sourceCode cell-code" id="annotated-cell-6"><pre class="sourceCode r code-annotation-code code-with-copy"><code class="sourceCode r"><span id="annotated-cell-6-1"><a href="#annotated-cell-6-1" aria-hidden="true" tabindex="-1"></a>anes_pilot_small <span class="sc">|&gt;</span></span>
 <span id="annotated-cell-6-2"><a href="#annotated-cell-6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_factor</span>() <span class="sc">|&gt;</span></span>
 <span id="annotated-cell-6-3"><a href="#annotated-cell-6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tbl_summary</span>()</span>
 <span id="annotated-cell-6-4"><a href="#annotated-cell-6-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="annotated-cell-6-5"><a href="#annotated-cell-6-5" aria-hidden="true" tabindex="-1"></a>anes_pilot_small <span class="sc">|&gt;</span></span>
 <span id="annotated-cell-6-6"><a href="#annotated-cell-6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_factor</span>() <span class="sc">|&gt;</span></span>
 <span id="annotated-cell-6-7"><a href="#annotated-cell-6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">skim</span>() <span class="sc">|&gt;</span></span>
-<span id="annotated-cell-6-8"><a href="#annotated-cell-6-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">yank</span>(<span class="st">&quot;numeric&quot;</span>)</span></code></pre></div>
+<span id="annotated-cell-6-8"><a href="#annotated-cell-6-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">yank</span>(<span class="st">"numeric"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
-<div id="vfsbdosoia" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#vfsbdosoia table {
+<div id="fkxmemibas" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#fkxmemibas table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#vfsbdosoia thead, #vfsbdosoia tbody, #vfsbdosoia tfoot, #vfsbdosoia tr, #vfsbdosoia td, #vfsbdosoia th {
+#fkxmemibas thead, #fkxmemibas tbody, #fkxmemibas tfoot, #fkxmemibas tr, #fkxmemibas td, #fkxmemibas th {
   border-style: none;
 }
 
-#vfsbdosoia p {
+#fkxmemibas p {
   margin: 0;
   padding: 0;
 }
 
-#vfsbdosoia .gt_table {
+#fkxmemibas .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -517,12 +526,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#vfsbdosoia .gt_caption {
+#fkxmemibas .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#vfsbdosoia .gt_title {
+#fkxmemibas .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -534,7 +543,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#vfsbdosoia .gt_subtitle {
+#fkxmemibas .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -546,7 +555,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#vfsbdosoia .gt_heading {
+#fkxmemibas .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -558,13 +567,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#vfsbdosoia .gt_bottom_border {
+#fkxmemibas .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#vfsbdosoia .gt_col_headings {
+#fkxmemibas .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -579,7 +588,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#vfsbdosoia .gt_col_heading {
+#fkxmemibas .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -599,7 +608,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#vfsbdosoia .gt_column_spanner_outer {
+#fkxmemibas .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -611,15 +620,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#vfsbdosoia .gt_column_spanner_outer:first-child {
+#fkxmemibas .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#vfsbdosoia .gt_column_spanner_outer:last-child {
+#fkxmemibas .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#vfsbdosoia .gt_column_spanner {
+#fkxmemibas .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -631,11 +640,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#vfsbdosoia .gt_spanner_row {
+#fkxmemibas .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#vfsbdosoia .gt_group_heading {
+#fkxmemibas .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -661,7 +670,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#vfsbdosoia .gt_empty_group_heading {
+#fkxmemibas .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -676,15 +685,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#vfsbdosoia .gt_from_md > :first-child {
+#fkxmemibas .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#vfsbdosoia .gt_from_md > :last-child {
+#fkxmemibas .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#vfsbdosoia .gt_row {
+#fkxmemibas .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -703,7 +712,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#vfsbdosoia .gt_stub {
+#fkxmemibas .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -716,7 +725,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#vfsbdosoia .gt_stub_row_group {
+#fkxmemibas .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -730,15 +739,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#vfsbdosoia .gt_row_group_first td {
+#fkxmemibas .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#vfsbdosoia .gt_row_group_first th {
+#fkxmemibas .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#vfsbdosoia .gt_summary_row {
+#fkxmemibas .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -748,16 +757,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#vfsbdosoia .gt_first_summary_row {
+#fkxmemibas .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#vfsbdosoia .gt_first_summary_row.thick {
+#fkxmemibas .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#vfsbdosoia .gt_last_summary_row {
+#fkxmemibas .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -767,7 +776,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#vfsbdosoia .gt_grand_summary_row {
+#fkxmemibas .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -777,7 +786,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#vfsbdosoia .gt_first_grand_summary_row {
+#fkxmemibas .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -787,7 +796,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#vfsbdosoia .gt_last_grand_summary_row_top {
+#fkxmemibas .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -797,11 +806,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#vfsbdosoia .gt_striped {
+#fkxmemibas .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#vfsbdosoia .gt_table_body {
+#fkxmemibas .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -810,7 +819,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#vfsbdosoia .gt_footnotes {
+#fkxmemibas .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -824,7 +833,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#vfsbdosoia .gt_footnote {
+#fkxmemibas .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -833,7 +842,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#vfsbdosoia .gt_sourcenotes {
+#fkxmemibas .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -847,7 +856,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#vfsbdosoia .gt_sourcenote {
+#fkxmemibas .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -855,63 +864,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#vfsbdosoia .gt_left {
+#fkxmemibas .gt_left {
   text-align: left;
 }
 
-#vfsbdosoia .gt_center {
+#fkxmemibas .gt_center {
   text-align: center;
 }
 
-#vfsbdosoia .gt_right {
+#fkxmemibas .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#vfsbdosoia .gt_font_normal {
+#fkxmemibas .gt_font_normal {
   font-weight: normal;
 }
 
-#vfsbdosoia .gt_font_bold {
+#fkxmemibas .gt_font_bold {
   font-weight: bold;
 }
 
-#vfsbdosoia .gt_font_italic {
+#fkxmemibas .gt_font_italic {
   font-style: italic;
 }
 
-#vfsbdosoia .gt_super {
+#fkxmemibas .gt_super {
   font-size: 65%;
 }
 
-#vfsbdosoia .gt_footnote_marks {
+#fkxmemibas .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#vfsbdosoia .gt_asterisk {
+#fkxmemibas .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#vfsbdosoia .gt_indent_1 {
+#fkxmemibas .gt_indent_1 {
   text-indent: 5px;
 }
 
-#vfsbdosoia .gt_indent_2 {
+#fkxmemibas .gt_indent_2 {
   text-indent: 10px;
 }
 
-#vfsbdosoia .gt_indent_3 {
+#fkxmemibas .gt_indent_3 {
   text-indent: 15px;
 }
 
-#vfsbdosoia .gt_indent_4 {
+#fkxmemibas .gt_indent_4 {
   text-indent: 20px;
 }
 
-#vfsbdosoia .gt_indent_5 {
+#fkxmemibas .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -919,8 +928,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <thead>
     
     <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;Characteristic&lt;/strong&gt;"><strong>Characteristic</strong></th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;N = 1,585&lt;/strong&gt;&lt;span class=&quot;gt_footnote_marks&quot; style=&quot;white-space:nowrap;font-style:italic;font-weight:normal;&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/span&gt;"><strong>N = 1,585</strong><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="<strong>Characteristic</strong>"><strong>Characteristic</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="<strong>N = 1,585</strong><span class=&quot;gt_footnote_marks&quot; style=&quot;white-space:nowrap;font-style:italic;font-weight:normal;&quot;><sup>1</sup></span>"><strong>N = 1,585</strong><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span></th>
     </tr>
   </thead>
   <tbody class="gt_table_body">
@@ -928,233 +937,233 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td headers="stat_0" class="gt_row gt_center">793 (397, 1,189)</td></tr>
     <tr><td headers="label" class="gt_row gt_left">Analysis weight</td>
 <td headers="stat_0" class="gt_row gt_center">0.89 (0.65, 1.18)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Unknown</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Unknown</td>
 <td headers="stat_0" class="gt_row gt_center">85</td></tr>
     <tr><td headers="label" class="gt_row gt_left">How would you rate people who forced their way into the U.S. Capitol on January 6, 2021?</td>
 <td headers="stat_0" class="gt_row gt_center">15 (1, 50)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Unknown</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Unknown</td>
 <td headers="stat_0" class="gt_row gt_center">2</td></tr>
     <tr><td headers="label" class="gt_row gt_left">How would you rate the U.S. Supreme Court?</td>
 <td headers="stat_0" class="gt_row gt_center">51 (30, 74)</td></tr>
     <tr><td headers="label" class="gt_row gt_left">Compared to 2020, would you say the U.S. economy is much better, somewhat better, about the same, somewhat worse, or much worse?</td>
 <td headers="stat_0" class="gt_row gt_center"></td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Much better</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Much better</td>
 <td headers="stat_0" class="gt_row gt_center">108 (6.8%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Somewhat better</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Somewhat better</td>
 <td headers="stat_0" class="gt_row gt_center">231 (15%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    About the same</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;About the same</td>
 <td headers="stat_0" class="gt_row gt_center">273 (17%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Somewhat worse</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Somewhat worse</td>
 <td headers="stat_0" class="gt_row gt_center">346 (22%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Much worse</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Much worse</td>
 <td headers="stat_0" class="gt_row gt_center">627 (40%)</td></tr>
     <tr><td headers="label" class="gt_row gt_left">Profile: Party Identification</td>
 <td headers="stat_0" class="gt_row gt_center"></td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Strong Democrat</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Strong Democrat</td>
 <td headers="stat_0" class="gt_row gt_center">349 (23%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Not very strong Democrat</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Not very strong Democrat</td>
 <td headers="stat_0" class="gt_row gt_center">156 (10%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Lean Democrat</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Lean Democrat</td>
 <td headers="stat_0" class="gt_row gt_center">126 (8.3%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Independent</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Independent</td>
 <td headers="stat_0" class="gt_row gt_center">245 (16%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Lean Republican</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Lean Republican</td>
 <td headers="stat_0" class="gt_row gt_center">150 (9.9%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Not very strong Republican</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Not very strong Republican</td>
 <td headers="stat_0" class="gt_row gt_center">150 (9.9%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Strong Republican</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Strong Republican</td>
 <td headers="stat_0" class="gt_row gt_center">281 (18%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Not sure</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Not sure</td>
 <td headers="stat_0" class="gt_row gt_center">62 (4.1%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Unknown</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Unknown</td>
 <td headers="stat_0" class="gt_row gt_center">66</td></tr>
     <tr><td headers="label" class="gt_row gt_left">Profile: 3 point Party ID</td>
 <td headers="stat_0" class="gt_row gt_center"></td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Democrat</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Democrat</td>
 <td headers="stat_0" class="gt_row gt_center">508 (33%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Republican</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Republican</td>
 <td headers="stat_0" class="gt_row gt_center">430 (28%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Independent</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Independent</td>
 <td headers="stat_0" class="gt_row gt_center">428 (28%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Other</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Other</td>
 <td headers="stat_0" class="gt_row gt_center">66 (4.3%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Not sure</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Not sure</td>
 <td headers="stat_0" class="gt_row gt_center">90 (5.9%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Unknown</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Unknown</td>
 <td headers="stat_0" class="gt_row gt_center">63</td></tr>
     <tr><td headers="label" class="gt_row gt_left">Profile: Ideology</td>
 <td headers="stat_0" class="gt_row gt_center"></td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Very liberal</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Very liberal</td>
 <td headers="stat_0" class="gt_row gt_center">171 (11%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Liberal</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Liberal</td>
 <td headers="stat_0" class="gt_row gt_center">253 (16%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Moderate</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Moderate</td>
 <td headers="stat_0" class="gt_row gt_center">486 (31%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Conservative</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Conservative</td>
 <td headers="stat_0" class="gt_row gt_center">342 (22%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Very conservative</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Very conservative</td>
 <td headers="stat_0" class="gt_row gt_center">198 (13%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Not sure</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Not sure</td>
 <td headers="stat_0" class="gt_row gt_center">134 (8.5%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Unknown</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Unknown</td>
 <td headers="stat_0" class="gt_row gt_center">1</td></tr>
     <tr><td headers="label" class="gt_row gt_left">Vote 2020 - Trump/Biden/Someone else</td>
 <td headers="stat_0" class="gt_row gt_center"></td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Donald Trump</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Donald Trump</td>
 <td headers="stat_0" class="gt_row gt_center">541 (45%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Joe Biden</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Joe Biden</td>
 <td headers="stat_0" class="gt_row gt_center">618 (51%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Someone else</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Someone else</td>
 <td headers="stat_0" class="gt_row gt_center">47 (3.9%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Unknown</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Unknown</td>
 <td headers="stat_0" class="gt_row gt_center">379</td></tr>
     <tr><td headers="label" class="gt_row gt_left">Follow what’s going on in government and public affairs</td>
 <td headers="stat_0" class="gt_row gt_center"></td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Most of the time</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Most of the time</td>
 <td headers="stat_0" class="gt_row gt_center">773 (49%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Some of the time</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Some of the time</td>
 <td headers="stat_0" class="gt_row gt_center">460 (29%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Only now and then</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Only now and then</td>
 <td headers="stat_0" class="gt_row gt_center">217 (14%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Hardly at all</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Hardly at all</td>
 <td headers="stat_0" class="gt_row gt_center">135 (8.5%)</td></tr>
     <tr><td headers="label" class="gt_row gt_left">Are you registered to vote, or not</td>
 <td headers="stat_0" class="gt_row gt_center"></td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Yes, registered to vote at my current address</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Yes, registered to vote at my current address</td>
 <td headers="stat_0" class="gt_row gt_center">1,319 (83%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Yes, registered to vote at a different address</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Yes, registered to vote at a different address</td>
 <td headers="stat_0" class="gt_row gt_center">70 (4.4%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    No, not registered</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;No, not registered</td>
 <td headers="stat_0" class="gt_row gt_center">196 (12%)</td></tr>
     <tr><td headers="label" class="gt_row gt_left">Done the following things in the past 12 months -- Attended a meeting to talk about political or social concern?</td>
 <td headers="stat_0" class="gt_row gt_center"></td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Have done this in past 12 months</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Have done this in past 12 months</td>
 <td headers="stat_0" class="gt_row gt_center">204 (13%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Have not done this in the past 12 months</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Have not done this in the past 12 months</td>
 <td headers="stat_0" class="gt_row gt_center">1,377 (87%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Unknown</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Unknown</td>
 <td headers="stat_0" class="gt_row gt_center">4</td></tr>
     <tr><td headers="label" class="gt_row gt_left">Done the following things in the past 12 months -- Given money to any candidate running for public office, any political party, or any other group that supported or opposed candidates?</td>
 <td headers="stat_0" class="gt_row gt_center"></td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Have done this in past 12 months</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Have done this in past 12 months</td>
 <td headers="stat_0" class="gt_row gt_center">289 (18%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Have not done this in the past 12 months</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Have not done this in the past 12 months</td>
 <td headers="stat_0" class="gt_row gt_center">1,289 (82%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Unknown</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Unknown</td>
 <td headers="stat_0" class="gt_row gt_center">7</td></tr>
     <tr><td headers="label" class="gt_row gt_left">How important are each of the following issues in the country today? -  Voting rights</td>
 <td headers="stat_0" class="gt_row gt_center"></td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Extremely important</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Extremely important</td>
 <td headers="stat_0" class="gt_row gt_center">600 (38%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Very important</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Very important</td>
 <td headers="stat_0" class="gt_row gt_center">364 (23%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Moderately important</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Moderately important</td>
 <td headers="stat_0" class="gt_row gt_center">321 (20%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Slightly important</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Slightly important</td>
 <td headers="stat_0" class="gt_row gt_center">177 (11%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Not at all important</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Not at all important</td>
 <td headers="stat_0" class="gt_row gt_center">122 (7.7%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Unknown</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Unknown</td>
 <td headers="stat_0" class="gt_row gt_center">1</td></tr>
     <tr><td headers="label" class="gt_row gt_left">Favor/oppose - overturn Roe v. Wade</td>
 <td headers="stat_0" class="gt_row gt_center"></td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Favor</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Favor</td>
 <td headers="stat_0" class="gt_row gt_center">526 (33%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Oppose</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Oppose</td>
 <td headers="stat_0" class="gt_row gt_center">764 (48%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Neither favor nor oppose</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Neither favor nor oppose</td>
 <td headers="stat_0" class="gt_row gt_center">295 (19%)</td></tr>
     <tr><td headers="label" class="gt_row gt_left">Profile: Gender</td>
 <td headers="stat_0" class="gt_row gt_center"></td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Male</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Male</td>
 <td headers="stat_0" class="gt_row gt_center">707 (45%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Female</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Female</td>
 <td headers="stat_0" class="gt_row gt_center">878 (55%)</td></tr>
     <tr><td headers="label" class="gt_row gt_left">Profile: Education</td>
 <td headers="stat_0" class="gt_row gt_center"></td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    No HS</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;No HS</td>
 <td headers="stat_0" class="gt_row gt_center">75 (4.7%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    High school graduate</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;High school graduate</td>
 <td headers="stat_0" class="gt_row gt_center">445 (28%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Some college</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Some college</td>
 <td headers="stat_0" class="gt_row gt_center">357 (23%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    2-year</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;2-year</td>
 <td headers="stat_0" class="gt_row gt_center">155 (9.8%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    4-year</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;4-year</td>
 <td headers="stat_0" class="gt_row gt_center">363 (23%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Post-grad</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Post-grad</td>
 <td headers="stat_0" class="gt_row gt_center">190 (12%)</td></tr>
     <tr><td headers="label" class="gt_row gt_left">Profile: Family income</td>
 <td headers="stat_0" class="gt_row gt_center"></td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Less than $10,000</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Less than $10,000</td>
 <td headers="stat_0" class="gt_row gt_center">112 (7.1%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    $10,000 - $19,999</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;$10,000 - $19,999</td>
 <td headers="stat_0" class="gt_row gt_center">120 (7.6%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    $20,000 - $29,999</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;$20,000 - $29,999</td>
 <td headers="stat_0" class="gt_row gt_center">157 (9.9%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    $30,000 - $39,999</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;$30,000 - $39,999</td>
 <td headers="stat_0" class="gt_row gt_center">124 (7.8%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    $40,000 - $49,999</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;$40,000 - $49,999</td>
 <td headers="stat_0" class="gt_row gt_center">107 (6.8%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    $50,000 - $59,999</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;$50,000 - $59,999</td>
 <td headers="stat_0" class="gt_row gt_center">121 (7.6%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    $60,000 - $69,999</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;$60,000 - $69,999</td>
 <td headers="stat_0" class="gt_row gt_center">108 (6.8%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    $70,000 - $79,999</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;$70,000 - $79,999</td>
 <td headers="stat_0" class="gt_row gt_center">119 (7.5%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    $80,000 - $99,999</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;$80,000 - $99,999</td>
 <td headers="stat_0" class="gt_row gt_center">123 (7.8%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    $100,000 - $119,999</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;$100,000 - $119,999</td>
 <td headers="stat_0" class="gt_row gt_center">81 (5.1%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    $120,000 - $149,999</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;$120,000 - $149,999</td>
 <td headers="stat_0" class="gt_row gt_center">75 (4.7%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    $150,000 - $199,999</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;$150,000 - $199,999</td>
 <td headers="stat_0" class="gt_row gt_center">82 (5.2%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    $200,000 - $249,999</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;$200,000 - $249,999</td>
 <td headers="stat_0" class="gt_row gt_center">37 (2.3%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    $250,000 - $349,999</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;$250,000 - $349,999</td>
 <td headers="stat_0" class="gt_row gt_center">27 (1.7%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    $350,000 - $499,999</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;$350,000 - $499,999</td>
 <td headers="stat_0" class="gt_row gt_center">10 (0.6%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    $500,000 or more</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;$500,000 or more</td>
 <td headers="stat_0" class="gt_row gt_center">7 (0.4%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Prefer not to say</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Prefer not to say</td>
 <td headers="stat_0" class="gt_row gt_center">175 (11%)</td></tr>
     <tr><td headers="label" class="gt_row gt_left">Profile: Importance of religion (Pew version)</td>
 <td headers="stat_0" class="gt_row gt_center"></td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Very important</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Very important</td>
 <td headers="stat_0" class="gt_row gt_center">580 (37%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Somewhat important</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Somewhat important</td>
 <td headers="stat_0" class="gt_row gt_center">416 (26%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Not too important</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Not too important</td>
 <td headers="stat_0" class="gt_row gt_center">222 (14%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Not at all important</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Not at all important</td>
 <td headers="stat_0" class="gt_row gt_center">367 (23%)</td></tr>
     <tr><td headers="label" class="gt_row gt_left">Profile: Political Interest</td>
 <td headers="stat_0" class="gt_row gt_center"></td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Most of the time</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Most of the time</td>
 <td headers="stat_0" class="gt_row gt_center">723 (46%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Some of the time</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Some of the time</td>
 <td headers="stat_0" class="gt_row gt_center">429 (27%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Only now and then</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Only now and then</td>
 <td headers="stat_0" class="gt_row gt_center">219 (14%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Hardly at all</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Hardly at all</td>
 <td headers="stat_0" class="gt_row gt_center">152 (9.6%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Don't know</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Don't know</td>
 <td headers="stat_0" class="gt_row gt_center">60 (3.8%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Unknown</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Unknown</td>
 <td headers="stat_0" class="gt_row gt_center">2</td></tr>
     <tr><td headers="label" class="gt_row gt_left">Profile: Urban-rural status</td>
 <td headers="stat_0" class="gt_row gt_center"></td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Big city</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Big city</td>
 <td headers="stat_0" class="gt_row gt_center">317 (20%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Smaller city</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Smaller city</td>
 <td headers="stat_0" class="gt_row gt_center">244 (15%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Suburban area</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Suburban area</td>
 <td headers="stat_0" class="gt_row gt_center">549 (35%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Small town</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Small town</td>
 <td headers="stat_0" class="gt_row gt_center">201 (13%)</td></tr>
-    <tr><td headers="label" class="gt_row gt_left">    Rural area</td>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Rural area</td>
 <td headers="stat_0" class="gt_row gt_center">274 (17%)</td></tr>
   </tbody>
   
@@ -1166,19 +1175,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 </div>
 <p><strong>Variable type: numeric</strong></p>
-<table style="width:100%;">
+<table class="table table-sm table-striped small">
 <colgroup>
-<col style="width: 15%" />
-<col style="width: 10%" />
-<col style="width: 15%" />
-<col style="width: 7%" />
-<col style="width: 7%" />
-<col style="width: 4%" />
-<col style="width: 7%" />
-<col style="width: 7%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 6%" />
+<col style="width: 15%">
+<col style="width: 10%">
+<col style="width: 15%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 4%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 6%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1254,20 +1263,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section>
 <section id="save-your-updated-dataset" class="level3">
-<h3>Save your updated dataset?</h3>
+<h3 class="anchored" data-anchor-id="save-your-updated-dataset">Save your updated dataset?</h3>
 <p>Need help? <a href="http://wilkersite.sunycreate.cloud/4-2-the-bar-graph-a-graph-for-categorical-variables.html">Go to chapter 4 in the webbook.</a></p>
 <!-- If you made changes to your dataset, I suggest saving your dataset with a new name for future use. -->
-<div id="quarto-navigation-envelope" class="hidden">
-<p><span class="hidden" data-render-id="quarto-int-sidebar-title">POLS 2000 Webbook 2.0</span> <span class="hidden" data-render-id="quarto-int-navbar-title">POLS 2000 Webbook 2.0</span> <span class="hidden" data-render-id="quarto-int-next">SA 6: Two or more variable EDA</span> <span class="hidden" data-render-id="quarto-int-prev">SA 3: Data Management Strategies</span> <span class="hidden" data-render-id="quarto-int-sidebar:/index.html">Preface</span> <span class="hidden" data-render-id="quarto-int-sidebar:quarto-sidebar-section-1">GETTING READY TO WORK</span> <span class="hidden" data-render-id="quarto-int-sidebar:/posit_studio_cloud.html"><span class="chapter-number">1</span>  <span class="chapter-title">RStudio Cloud</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:/navigating_R.html"><span class="chapter-number">2</span>  <span class="chapter-title">Navigating RStudio</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:/using_quarto_docs.html"><span class="chapter-number">3</span>  <span class="chapter-title">Using Quarto Documents</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:quarto-sidebar-section-2">YOUR DATASET</span> <span class="hidden" data-render-id="quarto-int-sidebar:/choosing_a_dataset.html"><span class="chapter-number">4</span>  <span class="chapter-title">Choosing Your Dataset</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:quarto-sidebar-section-3">SKILLS &amp; TECHNIQUES</span> <span class="hidden" data-render-id="quarto-int-sidebar:/loading_saving_data.html"><span class="chapter-number">5</span>  <span class="chapter-title">Loading and Saving Data</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:/managing_data.html"><span class="chapter-number">6</span>  <span class="chapter-title">Managing Data</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:/one_variable_graphs.html"><span class="chapter-number">7</span>  <span class="chapter-title">Graphs for One Variable</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:/one_variable_statistics.html"><span class="chapter-number">8</span>  <span class="chapter-title">Statistics for One Variable</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:/two_plus_variable_graphs.html"><span class="chapter-number">9</span>  <span class="chapter-title">Graphs for Two or More Variables</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:/two_plus_variable_tables.html"><span class="chapter-number">10</span>  <span class="chapter-title">Tables for 2 or More Variables</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:/hypothesis_testing.html"><span class="chapter-number">11</span>  <span class="chapter-title">Hypothesis Testing</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:/regression.html"><span class="chapter-number">12</span>  <span class="chapter-title">Regression Analysis</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:quarto-sidebar-section-4">Appendices</span> <span class="hidden" data-render-id="quarto-int-sidebar:/sa_2_nespilot22_example.html">SA 2: 2022 ANES Pilot Study</span> <span class="hidden" data-render-id="quarto-int-sidebar:/sa_2_wvs_example.html">SA 2: WVS</span> <span class="hidden" data-render-id="quarto-int-sidebar:/sa_2_anes20_example.html">SA 2: ANES 2020</span> <span class="hidden" data-render-id="quarto-int-sidebar:/sa_3_example.html">SA 3: Data Management Strategies</span> <span class="hidden" data-render-id="quarto-int-sidebar:/sa_4_example.html">SA 4: Single Variable EDA</span> <span class="hidden" data-render-id="quarto-int-sidebar:/sa_6_example.html">SA 6: Two or more variable EDA</span> <span class="hidden" data-render-id="quarto-int-sidebar:/sa_7_example.html">SA 7: Hypothesis Testing</span> <span class="hidden" data-render-id="quarto-int-sidebar:/sa_8_logistic_example.html">SA 8: Logistic Regression Analysis</span> <span class="hidden" data-render-id="quarto-int-sidebar:/sa_8_linear_example.html">SA 8: Linear Regression Analysis</span> <span class="hidden" data-render-id="quarto-breadcrumbs-20606e28a0d567be1dabd5cf50a2dc3b">Appendices</span> <span class="hidden" data-render-id="quarto-breadcrumbs-d7193653369c7a84f61f9a5969f3e7f0">SA 4: Single Variable EDA</span></p>
-</div>
-<div id="quarto-meta-markdown" class="hidden">
-<p><span class="hidden" data-render-id="quarto-metatitle">POLS 2000 Webbook 2.0 - SA 4: Single Variable EDA</span> <span class="hidden" data-render-id="quarto-twittercardtitle">POLS 2000 Webbook 2.0 - SA 4: Single Variable EDA</span> <span class="hidden" data-render-id="quarto-ogcardtitle">POLS 2000 Webbook 2.0 - SA 4: Single Variable EDA</span> <span class="hidden" data-render-id="quarto-metasitename">POLS 2000 Webbook 2.0</span> <span class="hidden" data-render-id="quarto-twittercarddesc"></span> <span class="hidden" data-render-id="quarto-ogcardddesc"></span></p>
-</div>
+
+
 </section>
 </section>
 
 </main> <!-- /main -->
-<script id = "quarto-html-after-body" type="application/javascript">
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -1502,18 +1507,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a  href="/sa_3_example.html" class="pagination-link">
+      <a href="./sa_3_example.html" class="pagination-link">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">SA 3: Data Management Strategies</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a  href="/sa_6_example.html" class="pagination-link">
+      <a href="./sa_6_example.html" class="pagination-link">
         <span class="nav-page-text">SA 6: Two or more variable EDA</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
 
-</body>
 
-</html>
+
+</body></html>
